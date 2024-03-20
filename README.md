@@ -28,7 +28,7 @@ Step 1: Set up Virtual Machine and open traffic to all ports to expose it to the
 <img src="https://i.imgur.com/igCbH9R.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-Step 2: Create Log Analytics Workspace to injest logs from Virtual Machine.  <br/>
+Step 2: Create Log Analytics Workspace(LAW) to injest logs from Virtual Machine.  <br/>
 <img src="https://i.imgur.com/tJwMZdY.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
@@ -40,7 +40,7 @@ Step 4: Navigate to Data Collection tab for Microsoft Defender, and make sure "A
 <img src="https://i.imgur.com/aMONENz.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-Step 5: Navigate to log analytics workspace, select the "virtual machines" tab, and connect it to the VM we made.  <br/>
+Step 5: Navigate to Log Analytics Workspace(LAW), select the "virtual machines" tab, and connect it to the VM we made.  <br/>
 <img src="https://i.imgur.com/P2TfFkO.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
