@@ -22,86 +22,87 @@ In this lab we will map live cyber attacks using the Microsoft Sentinel SIEM too
 <h2>Program walk-through:</h2>
 
 <p align="center">
-Step 1: Set up a Virtual Machine and open traffic to all ports to expose it to the internet. <br/>
+<b>Step 1: Set up a Virtual Machine and open traffic to all ports to expose it to the internet. <br/>
 <img src="https://i.imgur.com/igCbH9R.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-Step 2: Create a Log Analytics Workspace(LAW) to ingest logs from the Virtual Machine.  <br/>
+<b>Step 2: Create a Log Analytics Workspace(LAW) to ingest logs from the Virtual Machine.  <br/>
 <img src="https://i.imgur.com/tJwMZdY.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-Step 3: Open Microsoft Defender, turn on "CSPM", turn on "Servers", and turn off "SQL servers on machines". <br/>
+<b>Step 3: Open Microsoft Defender, turn on "CSPM", turn on "Servers", and turn off "SQL servers on machines". <br/>
 <img src="https://i.imgur.com/6dpl1zP.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-Step 4: Navigate to the Data Collection tab for Microsoft Defender, and ensure that the "ALL EVENTS" option is selected for event and log collection.  <br/>
+<b>Step 4: Navigate to the Data Collection tab for Microsoft Defender, and ensure that the "ALL EVENTS" option is selected for event and log collection.  <br/>
 <img src="https://i.imgur.com/aMONENz.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-Step 5: Navigate to Log Analytics Workspace(LAW), select the "virtual machines" tab, and connect it to the VM we made.  <br/>
+<b>Step 5: Navigate to Log Analytics Workspace(LAW), select the "virtual machines" tab, and connect it to the VM we made.  <br/>
 <img src="https://i.imgur.com/P2TfFkO.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-Step 6: Open Microsoft Sentinel (the SIEM tool) and connect it to the workspace we made.  <br/>
+<b>Step 6: Open Microsoft Sentinel (the SIEM tool) and connect it to the workspace we made.  <br/>
 <img src="https://i.imgur.com/AlHiMsw.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-Step 7: Open the Remote Desktop and connect to the Virtual Machine (VM) Public IP address.  <br/>
+<b>Step 7: Open the Remote Desktop and connect to the Virtual Machine (VM) Public IP address.  <br/>
 <img src="https://i.imgur.com/DHFJD7u.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-Step 8: Turn off Windows Defender Firewall (for domain, private, and public profiles) on the remote desktop to allow response to ICMP echo requests (meaning people can discover it on the internet faster).  <br/>
+<b>Step 8: Turn off Windows Defender Firewall (for domain, private, and public profiles) on the remote desktop to allow response to ICMP echo requests (meaning people can discover it on the internet faster).  <br/>
 <img src="https://i.imgur.com/plDX073.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-Step 9: Ping the Virtual Machines IP address using the command line on your physical computer.  <br/>
+<b>Step 9: Ping the Virtual Machines IP address using the command line on your physical computer.  <br/>
 <img src="https://i.imgur.com/jtI861P.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-Step 10: Retrieve the API key from IPGeoLocation.io   <br/>
+<b>Step 10: Retrieve the API key from IPGeoLocation.io   <br/>
 <img src="https://i.imgur.com/MKbUIKl.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-Step 11: Write a custom script to Windows Powershell ISE (This script looks through the system event log and grabs IP address + Geodata for all failed RDP logons), and paste the custom API key that was retrieved in step 10.  <br/>
+<b>Step 11: Write a custom script to Windows Powershell ISE (This script looks through the system event log and grabs IP address + Geodata for all failed RDP logons), and paste the custom API key that was retrieved in step 10.  <br/>
 <img src="https://i.imgur.com/HFKQubO.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-Step 12: Run the PowerShell script and watch as the honeypot is attacked by threat actors from all around the world.  <br/>
+<b>Step 12: Run the PowerShell script and watch as the honeypot is attacked by threat actors from all around the world.  <br/>
 <img src="https://i.imgur.com/FQGt59P.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-Step 13: Copy all log data from the failed_rdp folder on the VM (collected using the Powershell script).  <br/>
+<b>Step 13: Copy all log data from the failed_rdp folder on the VM (collected using the Powershell script).  <br/>
 <img src="https://i.imgur.com/Mmx0nHG.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-Step 14: Save the log data copied during the previous step onto our computer using Notepad.  <br/>
+<b>Step 14: Save the log data copied during the previous step onto our computer using Notepad.  <br/>
 <img src="https://i.imgur.com/TXIz0vt.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-Step 15: Create a custom log on Log Analytics Workspace using the log data file saved in the previous step as a collection path.  <br/>
+<b>Step 15: Create a custom log on Log Analytics Workspace using the log data file saved in the previous step as a collection path.  <br/>
 <img src="https://i.imgur.com/qBUE0P1.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-Step 16: Wait about 30min for log data to load in LAW and then insert custom code to extract latitude, longitude, Source host/IP address, destination host, username, country, province or state, and timestamp.  <br/>
+<b>Step 16: Wait about 30 minutes for log data to load in LAW and then insert custom code to extract latitude, longitude, Source host/IP address, destination host, username, country, province or state, and timestamp.  <br/>
 <img src="https://i.imgur.com/P3HfbfH.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-Step 17: Open the Sentinel dashboard to see if data is present. This dashboard shows us the alerts, security events, etc from the log data we uploaded.  <br/>
+<b>Step 17: Open the Sentinel dashboard to see if data is present. This dashboard shows us the alerts, security events, etc from the log data we uploaded.  <br/>
 <img src="https://i.imgur.com/1lDhHtK.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-Step 18: Create a new workbook in Sentinel and add a log query.  <br/>
+<b>Step 18: Create a new workbook in Sentinel and add a log query.  <br/>
 <img src="https://i.imgur.com/8FNh519.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-Step 19: Write KQL code to extract and plot all information onto the workbook map.  <br/>
+<b>Step 19: Write KQL code to extract and plot all information onto the workbook map.  <br/>
 <img src="https://i.imgur.com/a0aEnEV.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-Step 20: Watch the map and see how geodata is mapped as logons are failed by threat actors around the world. In this case, we see activity from Russia and Mexico. These results are only after one hour.  <br/>
+<b>Step 20: Watch the map and see how geodata is mapped as logons are failed by threat actors around the world. In this case, we see activity from Russia and Mexico. These results are only after one hour.  <br/>
 <img src="https://i.imgur.com/dqDZ0f7.png" height="80%" width="80%" alt="Results after 1 hour"/>
 <br />
-These are the results after 6 hours.  <br/>
+<b>These are the results after 6 hours.  <br/>
 <img src="https://i.imgur.com/EBuk316.png" height="80%" width="80%" alt="Results after 6 hours"/>
 <br />
 <br />
+<b>These are the results of a separate VM honeypot I created, after 24 hours of being live and exposed to attacks
