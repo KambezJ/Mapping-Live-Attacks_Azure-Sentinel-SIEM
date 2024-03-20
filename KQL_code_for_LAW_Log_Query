@@ -1,0 +1,6 @@
+# This KQL code is used to map log data onto Sentinel through Log Analytics Workspace (LAW)
+Failed_RDP_with_geo_CL 
+| parse RawData with * "latitude:" Latitude ",longitude:" Longitude ",destinationhost:" DestinationHost ",username:" Username ",sourcehost:" Sourcehost ",state:" State ", country:" Country ",label:" Label ",timestamp:" Timestamp 
+| extend EventCount = 1
+| summarize event_count = sum(EventCount) by Sourcehost, Latitude, Longitude, Country, Label, DestinationHost
+| project Latitude, Longitude, DestinationHost, Sourcehost, Country, Label, event_count
