@@ -2,7 +2,7 @@
 
 <h2>Description</h2>
 In this lab I will be mapping live cyber attacks using Microsoft Sentinel SIEM tool by creating a VM honeypot, exposing it to the internet, and importing RDP failure logs into Microsoft's Log Analytics Workspace. The Powershell script in this repository is responsible for parsing out Windows Event Log information for failed RDP attacks and using a third-party API to collect geographic information about the attackers' location.
-I setup Microsoft Sentinel (SIEM) and connect it to a live virtual machine acting as a honeypot. I observe live attacks (RDP Brute Force) from all around the world and use a custom PowerShell script to look up the attackers' Geolocation data and plot them on a Microsoft Sentinel Map
+I setup Microsoft Sentinel (SIEM) and connect it to a live virtual machine acting as a honeypot. I observe live attacks (RDP Brute Force) from all around the world and use a custom PowerShell script to look up the attackers' Geolocation data and plot them on a Microsoft Sentinel Map.
 
 <br />
 
