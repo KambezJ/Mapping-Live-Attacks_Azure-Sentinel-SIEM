@@ -13,7 +13,7 @@ In this lab we will be mapping live cyber attacks using Microsoft Sentinel SIEM 
 - <b>Microsoft Log Analytics Workspace:</b> Importing RDP failure log information from VM acting as a honeypot.
 - <b>KQL:</b> Codes used to extract desired RawData and map the data on a Microsoft Sentinel map.
 - <b>Remote Desktop:</b> Access and work on the honeypot.
-- <b>IPgeolocation.io:</b> Extract failed RDP login logs from Windows Event Viewer.
+- <b>IPgeolocation.io:</b> IP Address to Geolocation API.
 
 
 <h2>Environments Used </h2>
@@ -63,7 +63,7 @@ Step 10: Retrieve API key from IPGeoLocation.io   <br/>
 <img src="https://i.imgur.com/MKbUIKl.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-Step 11: Write a custom script to Windows Powershell ISE (This script looks through the system event log and grabs IP address + Geodata for all failed RDP logins), and paste custom API key that was retieved in step 10.  <br/>
+Step 11: Write a custom script to Windows Powershell ISE (This script looks through the system event log and grabs IP address + Geodata for all failed RDP logons), and paste custom API key that was retieved in step 10.  <br/>
 <img src="https://i.imgur.com/HFKQubO.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
@@ -99,7 +99,7 @@ Step 19: Write KQL code to extract and plot all information onto the workbook ma
 <img src="https://i.imgur.com/a0aEnEV.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-Step 20: Watch the map and see how geodata is mapped as logins are failed by threat actors around the world. In this case, we see activity from Russia and Mexico.  <br/>
+Step 20: Watch the map and see how geodata is mapped as logons are failed by threat actors around the world. In this case, we see activity from Russia and Mexico.  <br/>
 <img src="https://i.imgur.com/dqDZ0f7.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
