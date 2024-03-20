@@ -74,7 +74,7 @@ In this lab we will map live cyber attacks using the Microsoft Sentinel SIEM too
 <img src="https://i.imgur.com/Mmx0nHG.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
-<b>Step 14: Save the log data copied during the previous step onto our computer using Notepad.  <br/>
+<b>Step 14: Save the log data copied during the previous step onto our ACTUAL computer (not VM) using Notepad.  <br/>
 <img src="https://i.imgur.com/TXIz0vt.png" height="80%" width="80%" alt="Program Walk-Through Steps"/>
 <br />
 <br />
