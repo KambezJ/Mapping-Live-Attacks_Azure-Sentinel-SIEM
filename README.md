@@ -106,3 +106,4 @@ In this lab we will map live cyber attacks using the Microsoft Sentinel SIEM too
 <br />
 <br />
 <b>These are the results of a separate VM honeypot I created, after 24 hours of being live and exposed to attacks
+<img src="https://i.imgur.com/VbRDyj2.png" height="80%" width="80%" alt="Results after 24 hours of a seperate experiment"/>
