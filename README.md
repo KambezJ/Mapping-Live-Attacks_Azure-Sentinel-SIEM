@@ -1,14 +1,14 @@
 <h1>Using a SIEM tool to map live cyber attacks</h1>
 
 <h2>Description</h2>
-In this lab we will map live cyber attacks using the Microsoft Sentinel SIEM tool by creating a VM honeypot, exposing it to the internet, and importing RDP failure logs into Microsoft's Log Analytics Workspace. The Powershell script in this repository parses out Windows Event Log information for failed RDP attacks and uses a third-party API to collect geographic information about the attackers' location. This consists of setting up Microsoft Sentinel (SIEM) and connecting it to a live virtual machine acting as a honeypot. We will observe live attacks (RDP Brute Force) coming in from around the world and use a custom PowerShell script to look up the attackers' Geolocation data and plot them on a Microsoft Sentinel (SIEM) Map.
+In this lab we will map live cyber attacks using the Microsoft Sentinel SIEM tool by creating a VM honeypot, exposing it to the internet, and importing RDP failure logs into Microsoft's Log Analytics Workspace. The Powershell script in this repository parses out Windows Event Log information for failed RDP attacks and uses a third-party API to collect geographic information about the attackers' location. This consists of setting up Microsoft Sentinel (SIEM) and connecting it to a live virtual machine acting as a honeypot. We will observe live attacks (RDP Brute Force) coming in from around the world, and use a custom PowerShell script to look up the attackers' Geolocation data and plot them on a Microsoft Sentinel (SIEM) Map.
 
 
 <h2>Tasks that will be performed</h2>
 
-- <b>Use custom PowerShell script</b> to extract metadata from Windows Event Viewer to be forwarded to a third party API in order to derive geolocation data.
+- <b>Use custom PowerShell script</b> to extract metadata from Windows Event Viewer to be forwarded to a third-party API to derive geolocation data.
 - <b>Configure Log Analytics Workspace in Azure</b> to ingest custom logs containing geographic information (Latitude, Longitude, State/Province, and Country).
-- <b>Configure Custom Fields in Log Analytics Workspace</b> with the intent o mapping geodata in Azure Sentinel.
+- <b>Configure Custom Fields in Log Analytics Workspace</b> to map geodata in Azure Sentinel.
 - <b>Configure Azure Sentinel</b> (Microsoft's cloud SIEM) workbook to display global attack data (RDP brute force) on world map according to physical location and magnitude of attacks.
 
 
@@ -18,10 +18,10 @@ In this lab we will map live cyber attacks using the Microsoft Sentinel SIEM too
 - <b>Windows 11</b> (22H2)
 - <b>PowerShell ISE:</b> Extract RDP failed logon logs from Windows Event Viewer.
 - <b>Microsoft Sentinel:</b> Map the locations where cyber attacks are coming from.
-- <b>Microsoft Log Analytics Workspace:</b> Importing RDP failure log information from VM acting as a honeypot.
-- <b>KQL:</b> Codes used to extract desired RawData and map the data on a Microsoft Sentinel map.
+- <b>Microsoft Log Analytics Workspace:</b> Import RDP failure logs from VM acting as a honeypot.
+- <b>KQL:</b> Code used to extract desired RawData and map the data on a Microsoft Sentinel map.
 - <b>Remote Desktop:</b> Access and work on the honeypot.
-- <b>IPgeolocation.io:</b> IP Address to Geolocation API.
+- <b>IPgeolocation.io:</b> IP Address to Geolocation conversion API.
 
 
 
