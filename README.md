@@ -13,8 +13,9 @@ In this lab we will map live cyber attacks using the Microsoft Sentinel SIEM too
 
 
 
-<h2>Languages and Utilities Used</h2>
+<h2>Environments, Languages and Utilities Used</h2>
 
+- <b>Windows 11</b> (22H2)
 - <b>PowerShell ISE:</b> Extract RDP failed logon logs from Windows Event Viewer.
 - <b>Microsoft Sentinel:</b> Map the locations where cyber attacks are coming from.
 - <b>Microsoft Log Analytics Workspace:</b> Importing RDP failure log information from VM acting as a honeypot.
@@ -22,10 +23,6 @@ In this lab we will map live cyber attacks using the Microsoft Sentinel SIEM too
 - <b>Remote Desktop:</b> Access and work on the honeypot.
 - <b>IPgeolocation.io:</b> IP Address to Geolocation API.
 
-
-<h2>Environments Used </h2>
-
-- <b>Windows 11</b> (22H2)
 
 
 <h2>Program walk-through:</h2>
